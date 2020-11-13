@@ -9,10 +9,12 @@
   </head>
   <body>
     <h1>this is sample.</h1>
+    <audio src="./curcuit.mp3" controls></audio>
     <p><a onclick="slideshow_timer()">開始</a></p>
     <div class="call-cont1">
       <h1 id="call_name">090-XXXX-XXXX</h1>
       <h5 id="call_time">　</h5>
+      <div class="reset" onclick="reset()">リセット</div>
       <div class="small-icons">
         <div class="icon-wrap">
           <img src="./2x/alerm@2x.png" alt="" onclick="stopSound(2)" />
@@ -33,7 +35,6 @@
           <p>応答</p>
         </div>
       </div>
-      <div class="reset" onclick="reset()">リセット</div>
     </div>
     <script src="script.js"></script>
   </body>

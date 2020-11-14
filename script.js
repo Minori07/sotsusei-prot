@@ -1,7 +1,7 @@
 var count = 0;
 var random_count = Math.round(Math.random() * 6) + 4; //* 幅 )+ 最小
 // slideshow_timer();
-sound = new Audio("./curcuit.mp3");
+var sound = new Audio("./curcuit.mp3");
 var call_tm = 0;
 var calling = true;
 var cont = new Array(".call-cont1", ".call-cont2");
@@ -9,10 +9,15 @@ var cont_c = 0;
 
 console.log(random_count);
 
+window.onload = function () {
+  window.scrollTo(0, 0);
+};
+
 function slideshow_timer() {
   count++;
   // console.log(count);
   if (count > 2) {
+    sound = new Audio("./curcuit.mp3");
     sound.repeat = true;
     sound.addEventListener("ended", function () {
       if (!!this.repeat) {

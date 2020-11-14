@@ -17,7 +17,6 @@ function slideshow_timer() {
   count++;
   // console.log(count);
   if (count > 2) {
-    sound = new Audio("./curcuit.mp3");
     sound.repeat = true;
     sound.addEventListener("ended", function () {
       if (!!this.repeat) {
@@ -45,14 +44,14 @@ function stopSound(n) {
   sound.pause();
   calling = false;
   if (n == "0") {
-    document.getElementById("call_name").innerHTML = "拒否";
+    document.getElementById("call_name" + cont_c).innerHTML = "拒否";
   } else if (n == "1") {
-    document.getElementById("call_name").innerHTML = "応答";
+    document.getElementById("call_name" + cont_c).innerHTML = "応答";
   } else {
-    document.getElementById("call_name").innerHTML = "その他";
+    document.getElementById("call_name" + cont_c).innerHTML = "その他";
   }
 
-  document.getElementById("call_time").innerHTML = call_tm / 100;
+  document.getElementById("call_time" + cont_c).innerHTML = call_tm / 100;
   $(".reset").css({ visibility: "visible" });
 }
 
@@ -65,5 +64,5 @@ function reset() {
   call_tm = 0;
   calling = true;
   sound.currentTime = 0;
-  // cont_c++;
+  cont_c = 1;
 }

@@ -12,8 +12,35 @@
     <!-- <audio src="./curcuit.mp3" controls></audio> -->
     <p><a onclick="slideshow_timer()">開始</a></p>
     <div class="call-cont1">
-      <h1 id="call_name">090-XXXX-XXXX</h1>
-      <h5 id="call_time">　</h5>
+      <h1 id="call_name0">090-XXXX-XXXX</h1>
+      <h5 id="call_time0">　</h5>
+      <p><a onclick="slideshow_timer()">開始</a></p>
+      <div class="reset" onclick="reset()">リセット</div>
+      <div class="small-icons">
+        <div class="icon-wrap">
+          <img src="./2x/alerm@2x.png" alt="" onclick="stopSound(2)" />
+          <p>後で通知</p>
+        </div>
+        <div class="icon-wrap">
+          <img src="./2x/mess@2x.png" alt="" onclick="stopSound(2)" />
+          <p>メッセージ</p>
+        </div>
+      </div>
+      <div class="main-icons">
+        <div class="icon-wrap">
+          <img src="./2x/no-call@2x.png" alt="" onclick="stopSound(0)" />
+          <p>拒否</p>
+        </div>
+        <div class="icon-wrap">
+          <img src="./2x/ok-call@2x.png" alt="" onclick="stopSound(1)" />
+          <p>応答</p>
+        </div>
+      </div>
+    </div>
+    <div class="call-cont2">
+      <h1 id="call_name1">090-2222-XXXX</h1>
+      <h5 id="call_time1">　</h5>
+      <p><a onclick="slideshow_timer()">開始</a></p>
       <div class="reset" onclick="reset()">リセット</div>
       <div class="small-icons">
         <div class="icon-wrap">

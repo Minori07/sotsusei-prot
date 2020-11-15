@@ -19,10 +19,6 @@ console.log(random_count);
 //   window.close();
 // }
 
-function winopen(url) {
-  win = window.open(url, "host", "scrollbars=1,width=780,height=480");
-}
-
 function slideshow_timer() {
   count++;
   // console.log(count);

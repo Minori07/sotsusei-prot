@@ -8,12 +8,27 @@
 .reset {
   visibility: hidden;
   margin-top: 50px;
+  position: absolute;
+  top: 20vh;
+}
+
+.call-cont0 {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: white;
+  visibility: hidden;
+  text-align: center;
+  padding-top: 10vh;
 }
 
 .call-cont1 {
   width: 100vw;
   height: 100vh;
-  background-color: rgb(0, 0, 0, 0.7);
+  background-color: rgb(0, 0, 0, 0.8);
   position: fixed;
   top: 0;
   left: 0;
@@ -21,15 +36,16 @@
   padding: 100px 50px;
   visibility: hidden;
 }
+
 .call-cont2 {
   width: 100vw;
   height: 100vh;
-  background-color: rgb(0, 0, 0, 0.7);
+  background-color: rgb(0, 0, 0, 0.8);
   position: fixed;
   top: 0;
   left: 0;
   color: white;
-  padding: 100px 50px;
+  padding: 100px 40px;
   visibility: hidden;
 }
 
@@ -38,18 +54,23 @@ h5 {
   text-align: center;
 }
 
+p {
+  margin-top: 10px;
+  font-size: 11px;
+}
+
 .small-icons {
   display: flex;
   justify-content: space-between;
-  height: 40px;
+  height: 30px;
   margin-top: 40vh;
 }
 
 .main-icons {
   display: flex;
   justify-content: space-between;
-  height: 100px;
-  margin-top: 50px;
+  height: 90px;
+  margin-top: 80px;
 }
 
 .icon-wrap {

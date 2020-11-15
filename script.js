@@ -1,10 +1,9 @@
-//= require serviceworker-companion #追加
 $(function () {
   $("a").click(function () {
     location.href = $(this).attr("href");
     return false;
   });
-});
+}); //ホーム追加でsafari起動させない
 
 var count = 0;
 var random_count = Math.round(Math.random() * 6) + 4; //* 幅 )+ 最小
@@ -12,7 +11,7 @@ var random_count = Math.round(Math.random() * 6) + 4; //* 幅 )+ 最小
 var sound = new Audio("./curcuit.mp3");
 var call_tm = 0;
 var calling = true;
-var cont = new Array(".call-cont1", ".call-cont2");
+var cont = new Array(".call-cont0", ".call-cont1", ".call-cont2");
 var cont_c = 0;
 
 console.log(random_count);
@@ -68,5 +67,7 @@ function reset() {
   call_tm = 0;
   calling = true;
   sound.currentTime = 0;
-  cont_c = 1;
+  if (cont_c < 2) {
+    cont_c += 1;
+  }
 }

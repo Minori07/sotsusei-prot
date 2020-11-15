@@ -63,5 +63,7 @@ img {
 }
 
 .scroll-end {
-  margin-top: 200vh;
+  background-color: aqua;
+  width: 80vw;
+  height: 200vh;
 }

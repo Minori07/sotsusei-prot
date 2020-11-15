@@ -1,3 +1,11 @@
+//= require serviceworker-companion #追加
+$(function () {
+  $("a").click(function () {
+    location.href = $(this).attr("href");
+    return false;
+  });
+});
+
 var count = 0;
 var random_count = Math.round(Math.random() * 6) + 4; //* 幅 )+ 最小
 // slideshow_timer();
@@ -8,16 +16,6 @@ var cont = new Array(".call-cont1", ".call-cont2");
 var cont_c = 0;
 
 console.log(random_count);
-
-// function openWindow(url, windowName) {
-//   info =
-//     "toolbar=no,location=no,directories=no,status=no,menubar=no," +
-//     "scrollbars=yes,left=0,top=0,resizable=yes,width=1014,height=740,title=no";
-//   var window1 = window.open(url, windowName, info);
-//   window1.moveTo(0, 0);
-//   window.opener = self;
-//   window.close();
-// }
 
 function slideshow_timer() {
   count++;

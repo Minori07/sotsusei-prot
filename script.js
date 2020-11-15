@@ -9,9 +9,15 @@ var cont_c = 0;
 
 console.log(random_count);
 
-window.onload = function () {
-  window.scrollTo(0, 0);
-};
+function openWindow(url, windowName) {
+  info =
+    "toolbar=no,location=no,directories=no,status=no,menubar=no," +
+    "scrollbars=yes,left=0,top=0,resizable=yes,width=1014,height=740,title=no";
+  var window1 = window.open(url, windowName, info);
+  window1.moveTo(0, 0);
+  window.opener = self;
+  window.close();
+}
 
 function slideshow_timer() {
   count++;

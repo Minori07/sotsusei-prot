@@ -7,9 +7,9 @@
 
 .reset {
   visibility: hidden;
-  margin-top: 50px;
+  color: white;
   position: absolute;
-  top: 20vh;
+  top: 50px;
 }
 
 .call-cont0 {
@@ -35,18 +35,7 @@
   color: white;
   padding: 100px 50px;
   visibility: hidden;
-}
-
-.call-cont2 {
-  width: 100vw;
-  height: 100vh;
-  background-color: rgb(0, 0, 0, 0.8);
-  position: fixed;
-  top: 0;
-  left: 0;
-  color: white;
-  padding: 100px 40px;
-  visibility: hidden;
+  transition: 0.5s;
 }
 
 h1,
@@ -75,10 +64,73 @@ p {
 
 .icon-wrap {
   text-align: center;
-  width: 100px;
+  height: 100%;
 }
 
 img {
   height: 100%;
   object-fit: contain;
+}
+
+.call-cont2 {
+  width: 95vw;
+  height: 100px;
+  border-radius: 15px;
+  background-color: rgb(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: white;
+  margin: 40px 2.5vw;
+  visibility: hidden;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* transition: 0.5s; */
+}
+
+.call-cont2 h1 {
+  font-size: 23px;
+  font-weight: 500;
+}
+
+.call-cont2 .main-icons {
+  display: flex;
+  justify-content: space-between;
+  height: 45px;
+  width: 100px;
+  margin-top: 0;
+}
+
+.call-cont3 {
+  width: 95vw;
+  height: 100px;
+  border-radius: 15px;
+  background-color: rgb(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: white;
+  margin: 40px 2.5vw;
+  visibility: hidden;
+}
+
+.call-cont3 h1 {
+  font-size: 23px;
+  font-weight: 500;
+  margin-top: 5px;
+}
+
+.action-icon-wrap {
+  height: 30px;
+  text-align: center;
+  position: relative;
+}
+
+.action-dis {
+  position: absolute;
+  top: -30%;
+  left: 60%;
+  opacity: 0.6;
+  font-size: 15px;
 }

@@ -6,10 +6,58 @@
 }
 
 .reset {
-  visibility: hidden;
+  /* visibility: hidden; */
   color: white;
-  position: absolute;
-  top: 50px;
+  position: fixed;
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #ec5b3e;
+  text-align: center;
+  line-height: 40px;
+  color: white;
+  top: 20px;
+  left: 20px;
+}
+
+.none {
+  visibility: hidden;
+}
+
+.main-cont {
+  width: 95vw;
+  height: 90vh;
+  margin: auto;
+  /* visibility: hidden; */
+}
+
+.start-btn {
+  width: 180px;
+  height: 50px;
+  border-radius: 10px;
+  box-shadow: gray 0 2px 5px;
+  background-color: #ec5b3e;
+  margin: 20px auto;
+  text-align: center;
+  line-height: 50px;
+  color: white;
+  /* visibility: visible; */
+}
+.next-btn {
+  width: 180px;
+  height: 50px;
+  border-radius: 10px;
+  box-shadow: gray 0 2px 5px;
+  background-color: #4dab76;
+  margin: auto;
+  text-align: center;
+  line-height: 50px;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.main-cont img {
+  width: 100%;
 }
 
 .call-cont0 {
@@ -20,7 +68,7 @@
   top: 0;
   left: 0;
   color: white;
-  visibility: hidden;
+  /* visibility: hidden; */
   text-align: center;
   padding-top: 10vh;
 }
@@ -34,11 +82,12 @@
   left: 0;
   color: white;
   padding: 100px 50px;
-  visibility: hidden;
+  /* visibility: hidden; */
   transition: 0.5s;
 }
 
 h1,
+h2,
 h5 {
   text-align: center;
 }
@@ -72,7 +121,7 @@ img {
   object-fit: contain;
 }
 
-.call-cont2 {
+.call-cont-button {
   width: 95vw;
   height: 100px;
   border-radius: 15px;
@@ -82,19 +131,19 @@ img {
   left: 0;
   color: white;
   margin: 40px 2.5vw;
-  visibility: hidden;
+  /* visibility: hidden; */
   display: flex;
   justify-content: space-around;
   align-items: center;
   /* transition: 0.5s; */
 }
 
-.call-cont2 h1 {
+.call-cont-button h1 {
   font-size: 23px;
   font-weight: 500;
 }
 
-.call-cont2 .main-icons {
+.call-cont-button .main-icons {
   display: flex;
   justify-content: space-between;
   height: 45px;
@@ -102,7 +151,7 @@ img {
   margin-top: 0;
 }
 
-.call-cont3 {
+.call-cont-sw {
   width: 95vw;
   height: 100px;
   border-radius: 15px;
@@ -112,10 +161,10 @@ img {
   left: 0;
   color: white;
   margin: 40px 2.5vw;
-  visibility: hidden;
+  /* visibility: hidden; */
 }
 
-.call-cont3 h1 {
+.call-cont-sw h1 {
   font-size: 23px;
   font-weight: 500;
   margin-top: 5px;

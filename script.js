@@ -211,7 +211,7 @@ function spreadIcon() {
 function nextImg() {
   document.getElementById("mtgi").src = mtgi_Imgs[img_c];
   img_c += 1;
-  if (img_c == 2) {
-    document.getElementById("mtgi-disc").innerHTML = "間違いは全部で7箇所";
+  if (img_c == 4) {
+    document.getElementById("mtgi-disc").innerHTML = "間違いは全部で8箇所";
   }
 }

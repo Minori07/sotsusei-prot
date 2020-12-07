@@ -14,18 +14,42 @@ var mtgi_Imgs = new Array(
   "./mtgi/mtgi-a1.png"
 );
 
+var number = new Array(
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  16,
+  17,
+  18
+);
+var cont_n;
+
 $(function () {
   $("a").click(function () {
     location.href = $(this).attr("href");
     return false;
   });
-  console.log(random_count);
   setSwipe("#cont9");
   setSwipe("#cont10");
   setSwipe("#cont11");
   setSlide(".slide-call-icon-wrap");
   setSlide(".slide-call-icon-wrap2");
   setSlide(".slide-call-icon-wrap3");
+  number.sort(() => Math.random() - 0.5);
+  number.unshift(0);
+  console.log(number);
 }); //ホーム追加でsafari起動させない
 
 function slideshow_timer() {
@@ -41,8 +65,8 @@ function slideshow_timer() {
         this.play();
       }
     });
-    $("#cont" + cont_c).removeClass("none");
-    if (cont_c == 14 || cont_c == 15) {
+    $("#cont" + number[cont_c]).removeClass("none");
+    if (number[cont_c] == 14 || number[cont_c] == 15) {
       $("body").css({ "background-color": "rgb(0,0,0,0.3)" });
     }
     sound.play();
@@ -60,38 +84,38 @@ function timeCount() {
 }
 
 function stopSound(n) {
-  console.log(cont_c);
   sound.repeat = false;
   sound.pause();
   if (calling) {
     record.push(call_tm / 100);
   }
   calling = false;
-  $("#cont" + cont_c).removeClass("call-cont-button");
-  $("#cont" + cont_c).removeClass("call-cont-sw");
-  $("#cont" + cont_c).removeClass("rl-slide");
-  $("#cont" + cont_c).removeClass("call-cont-bn");
-  $("#cont" + cont_c).removeClass("call-cont-icon");
-  $("#cont" + cont_c).addClass("call-cont1");
-  if (cont_c == 14 || cont_c == 15) {
+  $("#cont" + number[cont_c]).removeClass("call-cont-button");
+  $("#cont" + number[cont_c]).removeClass("call-cont-sw");
+  $("#cont" + number[cont_c]).removeClass("rl-slide");
+  $("#cont" + number[cont_c]).removeClass("call-cont-bn");
+  $("#cont" + number[cont_c]).removeClass("call-cont-icon");
+  $("#cont" + number[cont_c]).addClass("call-cont1");
+  if (number[cont_c] == 14 || number[cont_c] == 15) {
     $("body").css({ "background-color": "rgb(0,0,0,0)" });
-  } else if (cont_c > 16) {
-    $("#cont" + cont_c).css({ width: "100vw" });
+  } else if (number[cont_c] > 16) {
+    $("#cont" + number[cont_c]).css({ width: "100vw" });
   }
   if (n == "0") {
-    document.getElementById("call_name" + cont_c).innerHTML = "拒否";
+    document.getElementById("call_name" + number[cont_c]).innerHTML = "拒否";
   } else if (n == "1") {
-    document.getElementById("call_name" + cont_c).innerHTML = "応答";
+    document.getElementById("call_name" + number[cont_c]).innerHTML = "応答";
   } else {
-    document.getElementById("call_name" + cont_c).innerHTML = "その他";
+    document.getElementById("call_name" + number[cont_c]).innerHTML = "その他";
   }
 
-  document.getElementById("call_time" + cont_c).innerHTML = call_tm / 100;
+  document.getElementById("call_time" + number[cont_c]).innerHTML =
+    call_tm / 100;
   $(".reset").removeClass("none");
 }
 
 function reset() {
-  $("#cont" + cont_c).addClass("none");
+  $("#cont" + number[cont_c]).addClass("none");
   $(".reset").addClass("none");
   count = 0;
   random_count = Math.round(Math.random() * 20) + 40; //* 幅 )+ 最小
@@ -149,7 +173,6 @@ function setSwipe(elem) {
 function setSlide(elem) {
   let t = document.querySelector(elem);
   let pos = document.getElementById(elem);
-  console.log(elem);
   let startX; // タッチ開始 x座標
   let startY; // タッチ開始 y座標
   let moveX; // スワイプ中の x座標
@@ -168,15 +191,15 @@ function setSlide(elem) {
     e.preventDefault();
     moveX = e.changedTouches[0].pageX;
     moveY = e.changedTouches[0].pageY;
-    if (moveX < 289 && cont_c == 11) {
+    if (moveX < 289 && number[cont_c] == 11) {
       document.getElementById("icon-1").style.left = moveX - 40 + "px";
     }
     if (moveX < 330 && moveX > 80) {
-      if (cont_c == 12) {
+      if (number[cont_c] == 12) {
         document.getElementById("icon-2").style.left = moveX - 40 + "px";
-      } else if (cont_c == 13) {
+      } else if (number[cont_c] == 13) {
         document.getElementById("icon-3").style.left = moveX - 40 + "px";
-      } else if (cont_c == 17) {
+      } else if (number[cont_c] == 17) {
         document.getElementById("icon-4").style.left = moveX - 40 + "px";
       }
     }
@@ -196,7 +219,7 @@ function setSlide(elem) {
 
 var iconbar_wid;
 function spreadIcon() {
-  if (cont_c == 17) {
+  if (number[cont_c] == 17) {
     iconbar_wid = "300px";
     setSlide(".only-icon-wrap");
   } else {
@@ -204,8 +227,8 @@ function spreadIcon() {
     $(".only-icon-wrap").addClass("none");
     $(".only-stop-icon-wrap").removeClass("none");
   }
-  $("#cont" + cont_c).css({ width: iconbar_wid });
-  $("#call_name" + cont_c).css({ opacity: 1 });
+  $("#cont" + number[cont_c]).css({ width: iconbar_wid });
+  $("#call_name" + number[cont_c]).css({ opacity: 1 });
 }
 
 function nextImg() {

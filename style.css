@@ -5,6 +5,10 @@
   font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", sans-serif;
 }
 
+#reco {
+  margin-top: 30px;
+}
+
 .reset {
   /* visibility: hidden; */
   color: white;
@@ -37,10 +41,13 @@
   border-radius: 10px;
   box-shadow: gray 0 2px 5px;
   background-color: #ec5b3e;
-  margin: 20px auto;
+  /* margin: 20px auto; */
   text-align: center;
   line-height: 50px;
   color: white;
+  position: absolute;
+  top: 80px;
+  left: calc(50vw - 90px);
   /* visibility: visible; */
 }
 .next-btn {

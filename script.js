@@ -95,6 +95,7 @@ function stopSound(n) {
   $("#cont" + number[cont_c]).removeClass("rl-slide");
   $("#cont" + number[cont_c]).removeClass("call-cont-bn");
   $("#cont" + number[cont_c]).removeClass("call-cont-icon");
+  $(".only-icon-wrap").removeClass("none");
   $("#cont" + number[cont_c]).addClass("call-cont1");
   if (number[cont_c] == 14 || number[cont_c] == 15) {
     $("body").css({ "background-color": "rgb(0,0,0,0)" });

@@ -321,3 +321,10 @@ img {
   height: 62px;
   margin: 4px;
 }
+
+.main-cont2 {
+  width: 90vw;
+  height: 80vh;
+  border: solid 1px black;
+  margin: 5vh auto 0;
+}

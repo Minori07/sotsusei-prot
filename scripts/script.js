@@ -7,6 +7,20 @@ var cont_c = 0;
 var record = new Array(0);
 var img_c = 0;
 var mtgi_Imgs = new Array(
+  "./mtgi/mtgi-a1.jpeg",
+  "./mtgi/mtgi-2.jpeg",
+  "./mtgi/mtgi-a2.jpeg",
+  "./mtgi/mtgi-3.jpeg",
+  "./mtgi/mtgi-a3.jpeg",
+  "./mtgi/mtgi-4.png",
+  "./mtgi/mtgi-a4.png",
+  "./mtgi/mtgi-5.png",
+  "./mtgi/mtgi-a5.png",
+  "./mtgi/mtgi-6.png",
+  "./mtgi/mtgi-a6.png",
+  "./mtgi/mtgi-7.png",
+  "./mtgi/mtgi-a7.png",
+  "./mtgi/mtgi-2.jpg",
   "./mtgi/mtgi-a2.png",
   "./mtgi/mtgi-3.png",
   "./mtgi/mtgi-a3.png",
@@ -235,7 +249,11 @@ function spreadIcon() {
 function nextImg() {
   document.getElementById("mtgi").src = mtgi_Imgs[img_c];
   img_c += 1;
-  if (img_c == 4) {
-    document.getElementById("mtgi-disc").innerHTML = "間違いは全部で8箇所";
+  if (img_c == 14) {
+    document.getElementById("mtgi-disc").innerHTML = "間違いは全部で7箇所";
+    $(".main-cont").css({height: "80vh"});
+  }else if(img_c == 18){
+    document.getElementById("mtgi-disc").innerHTML = "ラスト問題:間違いは全部で8箇所";
+    $(".main-cont").css({height: "95vh"});
   }
 }

@@ -113,7 +113,7 @@ function reset() {
   $("#cont" + number[cont_c]).addClass("none");
   $(".reset").addClass("none");
   count = 0;
-//   random_count = Math.round(Math.random() * 20) + 40; //* 幅 )+ 最小
+  random_count = Math.round(Math.random() * 20) + 40; //* 幅 )+ 最小
   console.log(random_count);
   call_tm = 0;
   calling = true;

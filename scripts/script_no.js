@@ -51,6 +51,7 @@ function slideshow_timer() {
   }
   count++;
   if (count > random_count) {
+      calling = true;
     sound.repeat = true;
     sound.addEventListener("ended", function () {
       if (!!this.repeat) {
@@ -116,7 +117,7 @@ function reset() {
   random_count = Math.round(Math.random() * 20) + 40; //* 幅 )+ 最小
   console.log(random_count);
   call_tm = 0;
-  calling = true;
+//   calling = true;
   sound.currentTime = 0;
   if (cont_c < 18) {
     //デザイン個数入力
